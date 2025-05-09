@@ -1,4 +1,4 @@
-radio.setGroup(1);
+radio.setGroup(10);
 
 let x: number = 0;
 let y: number = 0;
@@ -28,11 +28,11 @@ function controlServo(xTilt: number, yTilt: number) {
 
    
     if (yTilt < -10) {
-        //forward
+        //vpřed
         PCAmotor.MotorRun(PCAmotor.Motors.M4, (yTilt + (xTilt/2)))
         PCAmotor.MotorRun(PCAmotor.Motors.M1, (yTilt - (xTilt/2)))
     } else if (yTilt > 10) {
-        //backward
+        //pozpátku
         PCAmotor.MotorRun(PCAmotor.Motors.M1, yTilt)
         PCAmotor.MotorRun(PCAmotor.Motors.M4, yTilt)
     } else {
@@ -41,11 +41,11 @@ function controlServo(xTilt: number, yTilt: number) {
     }
 /*
     if (xTilt < -10) {
-        // Turn Left
+        // zatočit do leva
         PCAmotor.MotorRun(PCAmotor.Motors.M1, (xTilt - 50))
         PCAmotor.MotorRun(PCAmotor.Motors.M4, xTilt)
     } else if (xTilt > 10) {
-        // Turn Right
+        // zatočit do prava
         PCAmotor.MotorRun(PCAmotor.Motors.M1, xTilt)
         PCAmotor.MotorRun(PCAmotor.Motors.M4, (xTilt - 50))
     }*/
