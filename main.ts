@@ -12,8 +12,8 @@ function controlServo(xTilt: number, yTilt: number) {
     turn = Math.constrain(turn, 0, 200)
     if (yTilt < -10) {
         // vpřed
-        PCAmotor.MotorRun(PCAmotor.Motors.M4, yTilt + xTilt / 2)
-        PCAmotor.MotorRun(PCAmotor.Motors.M1, yTilt - xTilt / 2)
+        PCAmotor.MotorRun(PCAmotor.Motors.M4, yTilt + xTilt / 3)// cim vetsi cislo, tim presnejsi zataceni
+        PCAmotor.MotorRun(PCAmotor.Motors.M1, yTilt - xTilt / 3)
     } else if (yTilt > 10) {
         // pozpátku
         PCAmotor.MotorRun(PCAmotor.Motors.M1, yTilt)
