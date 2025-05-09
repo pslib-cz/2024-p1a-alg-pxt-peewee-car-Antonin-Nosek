@@ -1,4 +1,4 @@
-radio.setGroup(10);
+radio.setGroup(11);
 
 let x: number = 0;
 let y: number = 0;
