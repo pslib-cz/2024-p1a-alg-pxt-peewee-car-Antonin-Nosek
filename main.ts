@@ -1,5 +1,5 @@
 radio.setGroup(11)
-
+radio.setTransmitSerialNumber(true)
 let y = 0
 let x = 0
 let turn = 0
