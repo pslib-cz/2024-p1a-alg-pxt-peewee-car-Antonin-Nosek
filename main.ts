@@ -7,10 +7,10 @@ let turn = 0
 let speed = 0
 
 function controlServo(xTilt: number, yTilt: number) {
-    speed = Math.map(yTilt, -1023, 1023, -200, 200)
-    speed = Math.constrain(speed, 0, 200)
-    turn = Math.map(xTilt, -1023, 1023, -200, 200)
-    turn = Math.constrain(turn, 0, 200)
+    speed = Math.map(yTilt, -1023, 1023, -255, 255)
+    speed = Math.constrain(speed, 0, 255)
+    turn = Math.map(xTilt, -1023, 1023, -255, 255)
+    turn = Math.constrain(turn, 0, 255)
 
     if (yTilt < -10) {
         // vpřed
