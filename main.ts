@@ -31,10 +31,10 @@ radio.onReceivedString(function (receivedString: string) {
         PCAmotor.MotorStopAll()
         basic.pause(1000)
     } else {
-        let part = receivedString.split(",")
-        if (part.length == 2) {
-            x = parseInt(part[0])
-            y = parseInt(part[1])
+        let parts = receivedString.split(",")
+        if (parts.length == 2) {
+            x = parseInt(parts[0])
+            y = parseInt(parts[1])
             controlServo(x, y)
         }
     }
