@@ -13,11 +13,11 @@ function controlServo(xTilt: number, yTilt: number) {
     turn = Math.constrain(turn, 0, 200)
 
     if (yTilt < -10) {
-        // forward
+        // vpřed
         PCAmotor.MotorRun(PCAmotor.Motors.M4, yTilt + xTilt / 3)
         PCAmotor.MotorRun(PCAmotor.Motors.M1, yTilt - xTilt / 3)
     } else if (yTilt > 10) {
-        // backward
+        // pozpátku 
         PCAmotor.MotorRun(PCAmotor.Motors.M1, yTilt)
         PCAmotor.MotorRun(PCAmotor.Motors.M4, yTilt)
     } else {
@@ -31,12 +31,12 @@ radio.onReceivedString(function (receivedString: string) {
         PCAmotor.MotorStopAll()
         basic.pause(1000)
     } else {
-        // Try to parse x and y from the string
-        let parts = receivedString.split(",")
-        if (parts.length == 2) {
-            x = parseInt(parts[0])
-            y = parseInt(parts[1])
+        let part = receivedString.split(",")
+        if (part.length == 2) {
+            x = parseInt(part[0])
+            y = parseInt(part[1])
             controlServo(x, y)
         }
     }
 })
+
