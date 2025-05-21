@@ -1,4 +1,4 @@
-radio.setGroup(11)
+radio.setGroup(61)
 radio.setTransmitSerialNumber(true)
 
 let x = 0
