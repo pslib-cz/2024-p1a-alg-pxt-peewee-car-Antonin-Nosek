@@ -1,4 +1,4 @@
-radio.setGroup(61)
+radio.setGroup(56)
 radio.setTransmitSerialNumber(true)
 
 let x = 0
@@ -14,8 +14,8 @@ function controlServo(xTilt: number, yTilt: number) {
 
     if (yTilt < -10) {
         // vpřed
-        PCAmotor.MotorRun(PCAmotor.Motors.M4, yTilt + xTilt / 3)
-        PCAmotor.MotorRun(PCAmotor.Motors.M1, yTilt - xTilt / 3)
+        PCAmotor.MotorRun(PCAmotor.Motors.M4, yTilt + xTilt / 2)
+        PCAmotor.MotorRun(PCAmotor.Motors.M1, yTilt - xTilt / 2)
     } else if (yTilt > 10) {
         // pozpátku 
         PCAmotor.MotorRun(PCAmotor.Motors.M1, yTilt)
