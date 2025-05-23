@@ -1,5 +1,6 @@
 radio.setGroup(56)
 radio.setTransmitSerialNumber(true)
+radio.setTransmitPower(7)
 
 let x = 0
 let y = 0
